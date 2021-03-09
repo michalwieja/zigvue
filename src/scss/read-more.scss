@@ -1,0 +1,16 @@
+.read-more {
+  border: none;
+  color: white;
+  background-color: transparent;
+  font-size: 18px;
+
+  &.light-blue {
+    color: $light-blue;
+
+    img {
+      path {
+        stroke: $light-blue;
+      }
+    }
+  }
+}

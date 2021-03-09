@@ -1,4 +1,4 @@
-.button{
+.button {
   font-size: 16px;
   font-weight: 500;
   width: 210px;
@@ -12,11 +12,11 @@
   transition: .3s;
   cursor: pointer;
 
-  &--light-blue{
+  &.light-blue {
     border: 1px solid $light-blue;
     color: $light-blue;
 
-    &:hover{
+    &:hover {
       color: $blue;
       border: 1px solid $white;
       background-color: $white;

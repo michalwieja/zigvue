@@ -1,22 +1,58 @@
-.hero{
+.hero {
   background-color: $blue;
 
-  &__wrapper{
+  &__image{
+    position: absolute;
+    left: 50%;
+    height: 722px;
+    overflow: hidden;
+  }
+  &__wrapper {
     padding: $content-padding-desktop;
     @include flex;
-
-  }
-  &__content{
     height: 722px;
-    flex: 1;
-
+    width: 100%;
+    position: relative;
   }
-  &__text{
+
+  &__content {
+    width: 480px;
+  }
+
+  &__text {
     color: $white;
     font-size: 24px;
     padding: 50px 0px;
   }
-  &__image{
-    flex: 1;
+
+  .socials-wrapper {
+    @include flex;
+    padding-top: 50px;
+
+    .icon {
+      margin-right: 20px;
+      transition: .3s;
+
+      &:hover {
+        filter: invert(.3);
+      }
+    }
+  }
+  &__description{
+    width: 660px;
+    background-color: $grenade;
+    color: $white;
+    position: relative;
+    top: 80%;
+    left: 0;
+    padding: 30px 50px;
+
+    &__title{
+      font-size: 30px;
+    }
+    &__text{
+      padding: 20px 0;
+    }
+
   }
 }
