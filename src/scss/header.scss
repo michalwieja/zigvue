@@ -1,6 +1,6 @@
 .header {
   &__logo {
-    z-index: 2;
+    z-index: 3;
   }
 
   @include flex(center, space-between);
@@ -80,6 +80,7 @@
 
     &__nav {
       position: fixed;
+      z-index: 2;
       background-color: #fff;
       top: 0;
       right: -100%;
