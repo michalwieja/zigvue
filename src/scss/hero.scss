@@ -1,0 +1,22 @@
+.hero{
+  background-color: $blue;
+
+  &__wrapper{
+    padding: $content-padding-desktop;
+    @include flex;
+
+  }
+  &__content{
+    height: 722px;
+    flex: 1;
+
+  }
+  &__text{
+    color: $white;
+    font-size: 24px;
+    padding: 50px 0px;
+  }
+  &__image{
+    flex: 1;
+  }
+}

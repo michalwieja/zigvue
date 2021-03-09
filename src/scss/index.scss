@@ -2,10 +2,19 @@
 @import "reset";
 @import "mixins";
 @import "header";
+@import "hero";
+@import "button";
 
 
 .home {
-  @include flex(center,center);
-  background-color: #0028C8;
-  height: 100vh
+  min-height: 100vh;
+}
+
+.title{
+  font-size: 72px;
+  font-weight: bold;
+  text-decoration: underline;
+  line-height: 110px;
+  color: $white;
+  padding-top: 85px;
 }

@@ -1,0 +1,26 @@
+.button{
+  font-size: 16px;
+  font-weight: 500;
+  width: 210px;
+  height: 44px;
+  margin-right: 26px;
+  background-color: transparent;
+  border: 1px solid $black;
+  color: $black;
+  text-transform: uppercase;
+  font-family: $font-family;
+  transition: .3s;
+  cursor: pointer;
+
+  &--light-blue{
+    border: 1px solid $light-blue;
+    color: $light-blue;
+
+    &:hover{
+      color: $blue;
+      border: 1px solid $white;
+      background-color: $white;
+
+    }
+  }
+}
