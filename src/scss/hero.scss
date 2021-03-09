@@ -1,16 +1,23 @@
 .hero {
   background-color: $blue;
+  height: 722px;
+  position: relative;
 
-  &__image{
+  &__title {
+    padding-top: 85px;
+  }
+
+  &__image {
     position: absolute;
     left: 50%;
-    height: 722px;
+    height: 100%;
     overflow: hidden;
   }
+
   &__wrapper {
     padding: $content-padding-desktop;
     @include flex;
-    height: 722px;
+    height: 100%;
     width: 100%;
     position: relative;
   }
@@ -38,21 +45,66 @@
       }
     }
   }
-  &__description{
+
+  &__description {
     width: 660px;
     background-color: $grenade;
     color: $white;
     position: relative;
-    top: 80%;
-    left: 0;
-    padding: 30px 50px;
+    top: -170px;
+    left: 50%;
+    padding: 30px 70px;
 
-    &__title{
+    &__title {
       font-size: 30px;
     }
-    &__text{
+
+    &__text {
       padding: 20px 0;
     }
-
   }
 }
+
+@include respond-to($xxl) {
+  .hero {
+
+    &__wrapper {
+      padding: $content-padding-tablet;
+    }
+  }
+}
+
+@include respond-to($xl) {
+  .hero {
+    height: 553px;
+
+    &__title {
+      padding-top: 70px;
+    }
+
+    &__text {
+      font-size: 20px;
+      padding: 30px 0;
+    }
+
+    .socials-wrapper {
+      padding-top: 25px;
+    }
+
+    &__description {
+      width: 550px;
+
+
+      &__title {
+        font-size: 20px;
+      }
+
+      &__text {
+        font-size: 14px;
+        padding: 20px 0;
+      }
+    }
+  }
+}
+
+

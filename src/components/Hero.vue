@@ -1,5 +1,6 @@
 <template>
   <section class="hero">
+
     <div class="hero__image">
       <img src="@/assets/hero.jpg" alt="hero">
     </div>
@@ -24,17 +25,18 @@
           </div>
         </div>
       </div>
-      <div class="hero__description">
-        <div class="hero__description__title">
-          Zegarmistrzowska tradycja rodzinna
-        </div>
-        <div class="hero__description__text">
-          Dominik Sibielak. Dąbrowski zegarmistrz. Właściciel zakładu mieszczącego się w Dąbrowie
-          Górniczej przy ul. Kasprzaka 1A. Pracowity człowiek, z pasją poświęcający się swoim
-          zajęciom. Tchnie nowe życie w każdy zegarek, który klient mu przyniesie.
-        </div>
-        <ButtonReadMore color="light-blue" src="@/assets/arrow-right-light-blue.svg"/>
+
+    </div>
+    <div class="hero__description">
+      <div class="hero__description__title">
+        Zegarmistrzowska tradycja rodzinna
       </div>
+      <div class="hero__description__text">
+        Dominik Sibielak. Dąbrowski zegarmistrz. Właściciel zakładu mieszczącego się w Dąbrowie
+        Górniczej przy ul. Kasprzaka 1A. Pracowity człowiek, z pasją poświęcający się swoim
+        zajęciom. Tchnie nowe życie w każdy zegarek, który klient mu przyniesie.
+      </div>
+      <ButtonReadMore color="light-blue" src="@/assets/arrow-right-light-blue.svg"/>
     </div>
 
 

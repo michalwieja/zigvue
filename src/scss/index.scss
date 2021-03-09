@@ -17,5 +17,10 @@
   text-decoration: underline;
   line-height: 110px;
   color: $white;
-  padding-top: 85px;
+  @include respond-to($xl){
+    font-size: 64px;
+    line-height: 96px;
+  }
 }
+
+
