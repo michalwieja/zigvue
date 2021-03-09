@@ -1,0 +1,11 @@
+@import "variables";
+@import "reset";
+@import "mixins";
+@import "header";
+
+
+.home {
+  @include flex(center,center);
+  background-color: #0028C8;
+  height: 100vh
+}
