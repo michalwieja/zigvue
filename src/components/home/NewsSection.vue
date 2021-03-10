@@ -4,25 +4,22 @@
       Sporo się u nas dzieje. Bądź zawsze na bieżąco
     </div>
     <div class="news__cards">
-      <div v-for="index in 4" :key="index" class="news__card">
+      <div v-for="(card,index) in cards" :key="index" class="news__card">
         <div class="image">
-          <img src="@/assets/card.jpg" alt="photo">
+          <img alt="photo" src="@/assets/card.jpg">
         </div>
         <div class="description">
           <div class="date">
-            08.01.2021
+            {{ card.date }}
           </div>
           <div class="title">
-            Zegarmistrzowska tradycja rodzinna
+            {{ card.title }}
           </div>
           <ButtonReadMore/>
         </div>
-
-
-
       </div>
     </div>
-    <Button  text="zobacz wszystkie"/>
+    <Button text="zobacz wszystkie"/>
 
   </section>
 </template>
@@ -30,8 +27,33 @@
 <script>
 import ButtonReadMore from '@/components/ButtonReadMore';
 import Button from '@/components/Button';
+
 export default {
   name: "NewsSection",
-  components: { Button, ButtonReadMore }
+  components: { Button, ButtonReadMore },
+  data() {
+    return {
+      cards: [{
+        src: null,
+        date: '08.01.2021',
+        title: 'Zegarmistrzowska tradycja rodzinna'
+      },
+        {
+          src: null,
+          date: '07.01.2021',
+          title: 'Rzemieślniku zgłoś się! Rusza akcja wspierająca niewielkie zakłady usługowe w Dąbrowie Górniczej'
+        },
+        {
+          src: null,
+          date: '06.01.2021',
+          title: 'Zegarmistrzowska tradycja rodzinna'
+        },
+        {
+          src: null,
+          date: '05.01.2021',
+          title: 'Zegarmistrzowska tradycja rodzinna'
+        }]
+    }
+  }
 }
 </script>
