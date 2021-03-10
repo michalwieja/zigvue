@@ -1,38 +1,14 @@
 @import "variables";
 @import "reset";
 @import "mixins";
+@import "title";
 @import "header";
 @import "hero";
 @import "button";
 @import "read-more";
 @import "news-section";
 @import "announcements";
-//
-
-.main-title{
-  font-size: 72px;
-  font-weight: bold;
-  text-decoration: underline;
-  line-height: 110px;
-  color: $white;
-  @include respond-to($xl){
-    font-size: 64px;
-    line-height: 96px;
-  }
-  @include respond-to($large){
-    font-size: 50px;
-    line-height: 75px;
-  }
-  @include respond-to($small){
-    font-size: 34px;
-    line-height: 54px;
-  }
-}
-
-.sub-title{
-  font-size: 48px;
-  line-height: 64px;
-  font-weight: 500;
-}
+@import "slogan";
+@import "profits";
 
 

@@ -56,20 +56,31 @@
     padding-top: 200px;
   }
 }
-@include respond-to($large){
+
+@include respond-to($large) {
   .news {
 
     &__title {
       width: 90%;
-    }}
+    }
+  }
 }
+
 @include respond-to($small) {
   .news {
-    padding: 0 $content-padding-mobile;
-    padding-top: 200px;
-    &__cards{
+    padding: 400px $content-padding-mobile 0;
+
+    .button {
+      width: 100%;
+    }
+
+    &__cards {
       grid-template-columns:  1fr;
 
+    }
+
+    &__card {
+      min-width: 200px;
     }
   }
 }
