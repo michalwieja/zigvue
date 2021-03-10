@@ -6,6 +6,8 @@
     <Slogan/>
     <Profits/>
     <Motto />
+    <Newsletter/>
+    <Footer/>
 
   </div>
 </template>
@@ -18,9 +20,11 @@ import Announcements from '@/components/home/Announcements';
 import Slogan from '@/components/home/Slogan';
 import Profits from '@/components/home/Profits';
 import Motto from '@/components/home/Motto';
+import Footer from '@/components/Footer';
+import Newsletter from '@/components/Newsletter';
 
 export default {
   name: 'Home',
-  components: { Motto, Profits, Slogan, Announcements, NewsSection, Hero }
+  components: { Newsletter, Footer, Motto, Profits, Slogan, Announcements, NewsSection, Hero }
 }
 </script>

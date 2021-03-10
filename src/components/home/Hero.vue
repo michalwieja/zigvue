@@ -12,14 +12,7 @@
         <Button color="light-blue" text="więcej"/>
 
       </div>
-      <div class="socials-wrapper">
-        <div class="icon fb">
-          <img src="@/assets/fb.svg" alt="facebook">
-        </div>
-        <div class="icon in">
-          <img src="@/assets/in.svg" alt="linked in">
-        </div>
-      </div>
+<SocialWrapper/>
     </div>
     <div class="hero__image">
       <div class="hero__description">
@@ -31,14 +24,9 @@
           Górniczej przy ul. Kasprzaka 1A. Pracowity człowiek, z pasją poświęcający się swoim
           zajęciom. Tchnie nowe życie w każdy zegarek, który klient mu przyniesie.
         </div>
-
         <ButtonReadMore color="light-blue" src="@/assets/arrow-right-light-blue.svg"/>
       </div>
     </div>
-
-
-
-
   </section>
 </template>
 
@@ -47,8 +35,10 @@
 
 import Button from '@/components/Button';
 import ButtonReadMore from '@/components/ButtonReadMore';
+import SocialWrapper from '@/components/SocialWrapper';
+
 export default {
   name: "Hero",
-  components: { ButtonReadMore, Button }
+  components: { SocialWrapper, ButtonReadMore, Button }
 }
 </script>
