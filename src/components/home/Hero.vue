@@ -6,7 +6,7 @@
     </div>
     <div class="hero__wrapper">
       <div class="hero__content">
-        <div class="hero__title title">TU SĄ
+        <div class="hero__title main-title">TU SĄ
           MOŻLIWOŚCI
         </div>
         <div class="hero__text">Sukcesu w biznesie nie buduje się w pojedynkę, dlatego tworzymy

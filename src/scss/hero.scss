@@ -15,7 +15,7 @@
   }
 
   &__wrapper {
-    padding: $content-padding-desktop;
+    padding: 0 $content-padding-desktop;
     @include flex;
     height: 100%;
     width: 100%;
@@ -23,7 +23,7 @@
   }
 
   &__content {
-    width: 480px;
+    width: 40%;
   }
 
   &__text {
@@ -69,7 +69,7 @@
   .hero {
 
     &__wrapper {
-      padding: $content-padding-tablet;
+      padding: 0 $content-padding-tablet;
     }
   }
 }
@@ -105,6 +105,34 @@
       }
     }
   }
+}
+
+
+@include respond-to($large) {
+  .hero {
+
+    &__title {
+      padding-top: 50px;
+    }
+
+    &__description {
+      width: 450px;
+      padding: 20px 40px;
+
+
+      &__title {
+        font-size: 18px;
+      }
+
+      &__text {
+        font-size: 12px;
+        padding: 10px 0;
+      }
+    }
+  }
+}
+@include respond-to($small){
+
 }
 
 

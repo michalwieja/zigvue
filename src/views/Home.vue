@@ -1,18 +1,20 @@
 <template>
   <div class="home">
     <Hero/>
+    <NewsSection/>
+    <Announcements/>
 
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 
-
-import Hero from '@/components/Hero';
+import Hero from '@/components/home/Hero';
+import NewsSection from '@/components/home/NewsSection';
+import Announcements from '@/components/home/Announcements';
 
 export default {
   name: 'Home',
-  components: { Hero }
+  components: { Announcements, NewsSection, Hero }
 }
 </script>

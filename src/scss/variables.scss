@@ -6,6 +6,8 @@ $grenade: #000046;
 $light-blue: #85d4ff;
 $white: #ffffff;
 $black: #343434;
+$grey: #eeeeee;
+$red: #EB5757;
 
 //font
 
@@ -15,19 +17,22 @@ $font-family: 'Saira', sans-serif;
 //padding
 
 $site-padding-desktop: 0 64px;
-$content-padding-desktop: 0 320px;
+$content-padding-desktop: 320px;
 
 $site-padding-tablet: 0 50px;
-$content-padding-tablet: 0 133px;
+$content-padding-tablet: 133px;
 
 $site-padding-mobile: 0 30px;
+$content-padding-mobile: 30px;
+
 
 //breakpoints
-$xxl: 1650px;
+$xxl: 1680px;
+
 $xl: 1366px;
-$large: 1100px;
-$medium: 750px;
-$small: 600px;
+$large: 1152px;
+$medium: 1024px;
+$small: 800px;
 $xs: 400px
 
 
