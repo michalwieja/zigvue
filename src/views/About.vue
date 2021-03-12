@@ -13,7 +13,7 @@ export default {
   },
   methods: {
     async getPosts() {
-      const res = await RequestFactory('/wp-json/wp/v2/posts', {
+      const res = await RequestFactory('/api/get_recent_posts/', {
         params: {
           per_page: 1,
           page: 1,
