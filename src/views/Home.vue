@@ -1,14 +1,13 @@
 <template>
   <div class="home">
     <Hero/>
-    <NewsSection/>
+    <NewsSection :posts="posts"/>
     <Announcements/>
     <Slogan/>
     <Profits/>
-    <Motto />
+    <Motto/>
     <Newsletter/>
     <Footer/>
-
   </div>
 </template>
 
@@ -22,9 +21,30 @@ import Profits from '@/components/home/Profits';
 import Motto from '@/components/home/Motto';
 import Footer from '@/components/Footer';
 import Newsletter from '@/components/Newsletter';
+import RequestFactory from '@/api/request';
 
 export default {
   name: 'Home',
-  components: { Newsletter, Footer, Motto, Profits, Slogan, Announcements, NewsSection, Hero }
+  components: { Newsletter, Footer, Motto, Profits, Slogan, Announcements, NewsSection, Hero },
+  data() {
+    return {
+      posts: []
+    };
+  },
+  methods: {
+    async getPosts() {
+      const res = await RequestFactory('wp-json/wp/v2/posts/', {
+        params: {
+          per_page: 10,
+          page: 1,
+          _embed: true,
+        },
+      });
+      this.posts = res;
+    },
+  },
+  async mounted() {
+    await this.getPosts();
+  },
 }
 </script>

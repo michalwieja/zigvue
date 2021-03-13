@@ -4,16 +4,17 @@
       Sporo się u nas dzieje. Bądź zawsze na bieżąco
     </div>
     <div class="news__cards">
-      <div v-for="(card,index) in cards" :key="index" class="news__card">
+      <div v-for="post in posts" :key="post.id" class="news__card">
         <div class="image">
-          <img alt="photo" src="@/assets/card.jpg">
+          <img alt="photo">
         </div>
         <div class="description">
           <div class="date">
-            {{ card.date }}
+            {{ post.date }}
           </div>
           <div class="title">
-            {{ card.title }}
+            {{ post.title.rendered }}
+
           </div>
           <ButtonReadMore/>
         </div>
@@ -27,33 +28,31 @@
 <script>
 import ButtonReadMore from '@/components/ButtonReadMore';
 import Button from '@/components/Button';
+import RequestFactory from '@/api/request';
+
 
 export default {
   name: "NewsSection",
   components: { Button, ButtonReadMore },
   data() {
     return {
-      cards: [{
-        src: null,
-        date: '08.01.2021',
-        title: 'Zegarmistrzowska tradycja rodzinna'
-      },
-        {
-          src: null,
-          date: '07.01.2021',
-          title: 'Rzemieślniku zgłoś się! Rusza akcja wspierająca niewielkie zakłady usługowe w Dąbrowie Górniczej'
-        },
-        {
-          src: null,
-          date: '06.01.2021',
-          title: 'Zegarmistrzowska tradycja rodzinna'
-        },
-        {
-          src: null,
-          date: '05.01.2021',
-          title: 'Zegarmistrzowska tradycja rodzinna'
-        }]
+      media: [],
     }
-  }
+  },
+  props: {
+    posts: {
+      type: Object,
+      required: true
+    }
+  },
+  methods: {
+    async getImage() {
+      const res = await RequestFactory('wp-json/wp/v2/media/', {});
+      this.media = res;
+    },
+  },
+  async mounted() {
+    await this.getImage();
+  },
 }
 </script>

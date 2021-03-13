@@ -13,9 +13,9 @@ export default {
   },
   methods: {
     async getPosts() {
-      const res = await RequestFactory('/api/get_recent_posts/', {
+      const res = await RequestFactory('wp-json/wp/v2/posts/', {
         params: {
-          per_page: 1,
+          per_page: 10,
           page: 1,
           _embed: true,
         },
